@@ -10,6 +10,11 @@ const users=[
     {username:"admin", password:'admin123', role:'admin'},
 ]
 
+
+app.get('/',(req,res)=>{
+    return res.status(200).send(`<h1>Welcome to backend</h1>`)
+})
+
 app.post('/login',(req,res)=>{
     try{
         const {username, password}=req.body;
